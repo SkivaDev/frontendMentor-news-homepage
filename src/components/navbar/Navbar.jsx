@@ -1,11 +1,12 @@
 import React from "react";
 import "./navbar.scss";
-import { GiHamburgerMenu } from 'react-icons/gi'
 function Navbar() {
   return (
     <header className="header">
       <nav className="navbar">
-        <div className="navbar__logo"><a href="#">Web.</a></div>
+        <div className="navbar__logo">
+          <img src="./assets/images/logo.svg" alt="logo" />
+        </div>
         <ul class="navbar__links">
           <li><a href="#">Home</a></li>
           <li><a href="#">New</a></li>
@@ -14,7 +15,7 @@ function Navbar() {
           <li><a href="#">Categories</a></li>
         </ul>
         <div class="toggle_btn">
-          <GiHamburgerMenu/>
+          <img src="./assets/images/icon-menu.svg" alt="icon-menu"/>
         </div>
       </nav>
       <div class="dropdown_menu">
