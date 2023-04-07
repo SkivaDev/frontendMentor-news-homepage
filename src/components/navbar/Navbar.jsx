@@ -1,6 +1,13 @@
-import React from "react";
+import React, { useState } from "react";
 import "./navbar.scss";
 function Navbar() {
+
+  const [isOpen, setIsOpen] = useState(false);
+
+  const handleToggleClick = () => {
+    setIsOpen(!isOpen);
+  }
+
   return (
     <header className="header">
       <nav className="navbar">
@@ -14,16 +21,19 @@ function Navbar() {
           <li><a href="#">Trending</a></li>
           <li><a href="#">Categories</a></li>
         </ul>
-        <div class="toggle_btn">
+        <button class="toggle_btn" onClick={handleToggleClick}>
           <img src="./assets/images/icon-menu.svg" alt="icon-menu"/>
-        </div>
+        </button>
       </nav>
-      <div class="dropdown_menu">
+      <div class={`dropdown_menu ${isOpen ? "open" : ""}`}>
           <li><a href="#">Home</a></li>
           <li><a href="#">New</a></li>
           <li><a href="#">Popular</a></li>
           <li><a href="#">Trending</a></li>
           <li><a href="#">Categories</a></li>
+          <button className="icon-close" onClick={handleToggleClick}>
+            <img src="./assets/images/icon-menu-close.svg" alt="icon-close"/>
+          </button>
       </div>
     </header>
   );
