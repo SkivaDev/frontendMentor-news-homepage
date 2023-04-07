@@ -8,7 +8,7 @@
   padding: 0 20px;
   display: flex;
   flex-direction: column;
-  gap: 40px;
+  gap: 55px;
 
   .hero {
     display: grid;
@@ -139,5 +139,51 @@
         border: none;
       }
     }
-  }  
+  } 
+
+  .articles {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-auto-rows: max-content;
+    gap: 40px;
+
+    @include tablet {
+      grid-template-columns: repeat(a, 1fr);
+    }
+
+    &__item {
+      display: grid;
+      grid-template-columns: 100px 1fr;
+      gap: 25px;
+
+      &-logo {
+        width: 100%;
+        height: auto;
+      }
+
+      &-data {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+      }
+      &-number {
+        font-size: 30rem;
+        color: $Grayish-blue-color;
+      }
+      &-title {
+        font-size: 17rem;
+        font-weight: 800;
+        cursor: pointer;
+        transition: all 0.2s ease;
+
+        &:hover {
+          color: $bg-button;
+        }
+      }
+      &-text {
+        font-size: 15rem;
+        color: $Grayish-dark-blue-color;
+      }
+    }
+  }
 }

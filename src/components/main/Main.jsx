@@ -6,7 +6,6 @@ function Main() {
   return (
     <main className="main">
       <div className="hero">
-        {/* <img className="hero__desktop-imagen" src="./assets/images/image-web-3-desktop.jpg" alt="hero-imagen"/> */}
         <div className="hero__imagen"></div>
         <div className="hero__overview">
           <div className="hero__overview-title">
@@ -51,7 +50,7 @@ function Main() {
               alt={item.title}
               className="articles__item-logo"
             />
-            <div>
+            <div className="articles__item-data">
               <h2 className="articles__item-number">{item.number}</h2>
               <h3 className="articles__item-title">{item.title}</h3>
               <p className="articles__item-text">{item.text}</p>
