@@ -6,7 +6,8 @@ function Main() {
   return (
     <main className="main">
       <div className="hero">
-        <img src="./assets/images/image-web-3-desktop.jpg" alt="hero-imagen"/>
+        {/* <img className="hero__desktop-imagen" src="./assets/images/image-web-3-desktop.jpg" alt="hero-imagen"/> */}
+        <div className="hero__imagen"></div>
         <div className="hero__overview">
           <div className="hero__overview-title">
             <h1>The Bright Future of Web 3.0?</h1>
