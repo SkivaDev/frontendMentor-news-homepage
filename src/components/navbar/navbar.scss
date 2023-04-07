@@ -5,6 +5,7 @@
   left: 0;
   top: 0;
   width: 100%;
+  z-index: 1000;
 }
 
 .navbar {
@@ -18,12 +19,9 @@
   justify-content: space-between;
 
 
-  @include tablet {
-    // max-width: 1000px;
+  @include mobile {
+    height: 90px;
   }
-  // @include mobile {
-  //   gap: 15px;
-  // }
 
   &__logo{
     img {
@@ -40,7 +38,6 @@
     }
     li a {
       font-size: 17rem;
-      color: #000;
     }
     li a:hover {
       color: $main-color;
